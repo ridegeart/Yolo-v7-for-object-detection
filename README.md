@@ -56,6 +56,10 @@ dist.destroy_process_group()和torch.cuda.empty_cache()
 2. 使用小的網路模型yolov7-tiny.yaml，試試看增加batch_size，會不會超出內存。
 - confusion_matrix
 ![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/confusion_matrix.png)
+- 真實標記
+![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_labels.jpg))
+- 網路預測的標記
+![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_pred.jpg)
 
 [yolov7]:https://github.com/WongKinYiu/yolov7
 [AI CUP 2022秋季競賽，無人機飛行載具之智慧計數競賽]:https://tbrain.trendmicro.com.tw/Competitions/Details/25
