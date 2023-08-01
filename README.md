@@ -55,7 +55,7 @@ dist.destroy_process_group()和torch.cuda.empty_cache()
 1. 增加epoch訓練次數  
 2. 使用小的網路模型yolov7-tiny.yaml，試試看增加batch_size，會不會超出內存。
 - confusion_matrix
-![image]([picture or gif url](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/confusion_matrix.png))
+![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/confusion_matrix.png)
 
 [yolov7]:https://github.com/WongKinYiu/yolov7
 [AI CUP 2022秋季競賽，無人機飛行載具之智慧計數競賽]:https://tbrain.trendmicro.com.tw/Competitions/Details/25
