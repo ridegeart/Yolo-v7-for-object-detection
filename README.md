@@ -61,7 +61,7 @@ dist.destroy_process_group()和torch.cuda.empty_cache()
 2. Background FN：指的是檢測器錯過的Trash或Non-trash對象，並被視為其他一些背景對象。所以檢測器無法檢測出hov和person和mortocycle。
 3. 訓練使用的影像大小太小(只有416X416)造成無法辨識出太小的物體，例如：人、摩托車。
 - 真實標記
-![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_labels.jpg))
+![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_labels.jpg)
 - 網路預測的標記
 ![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_pred.jpg)
 
