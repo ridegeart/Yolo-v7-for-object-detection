@@ -31,7 +31,7 @@ An Custom Dataset implement for [yolov7]. Dataset from [AI CUP 2022秋季競賽�
 1. weights：訓練好的網路權重
 2. source：圖片路徑
 3. img-size：640*640
-4. project：輸出後的圖片與標記檔存放的位置
+4. project：輸出後的圖片與標記檔存放的位置  
 會輸出1.帶有 Bounding Box 標記好各類物件的圖片 2.每張圖片的 Bounding Box 的標記檔
 
 [yolov7]:https://github.com/WongKinYiu/yolov7
