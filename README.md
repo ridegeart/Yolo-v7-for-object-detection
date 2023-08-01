@@ -37,38 +37,24 @@ An Custom Dataset implement for [yolov7]. Dataset from [AI CUP 2022秋季競賽�
 
 ## Result
 在比賽中準確率 43.5973%。
-**可能原因**
+- 可能原因
 1. Epoch 數不足 : 因 batch size 過小，訓練圖片有1000張，需要多訓練幾個 epoch。
 2. Epoch 300 - 38.4635% / Epoch 400 - 40.4969% / Epoch 500 - 43.5973%
-**訓練時遇到的問題**
-
-1.內存不夠
-
-(1)因為免費的colab有限制的使用量，如果在訓練網路時，參數設定的太大會直接無法訓練，
-
-相關的參數：
-
+- 訓練時遇到的問題
+1. 內存不足：因為免費的colab有限制的使用量，如果在訓練網路時，參數設定的太大會直接無法訓練，
+2. 相關的參數：
 -batch_size：原本為64，修改為4。
-
 -img-size：原本為608X608，修改為416X416
-
--epochs：訓練回合數700，最好可以是classes*2000
-
-(2)也可以使用自己的anaconda進行訓練，但是很容易超出內存容量。
-
-(3)如何減少網路使用到的內存：
-
-a)使用比較小的網路模型yolov7-tiny.yaml，原本用的是yolov7.yaml
-
-b)更改train.py的設定：在訓練的過程中，丟棄一些梯度下降時的參數，
-
+-epochs：訓練回合數700，最好可以是classes*2000  
+也可以使用自己的anaconda進行訓練，但是很容易超出內存容量。
+- 如何減少網路使用到的內存：
+1. 使用比較小的網路模型：yolov7-tiny.yaml，原本用的是yolov7.yaml
+2. 更改train.py的設定：在訓練的過程中，丟棄一些梯度下降時的參數，  
 dist.destroy_process_group()和torch.cuda.empty_cache()
-
-**後續可以增加準確率的方法**
-
+- 後續可以增加準確率的方法：
 1.增加epoch訓練次數
-
 2.使用小的網路模型yolov7-tiny.yaml，試試看增加batch_size，會不會超出內存。
+
 [yolov7]:https://github.com/WongKinYiu/yolov7
 [AI CUP 2022秋季競賽，無人機飛行載具之智慧計數競賽]:https://tbrain.trendmicro.com.tw/Competitions/Details/25
 [歸一化公式]:https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fching-i%2F%25E5%25A6%2582%25E4%25BD%2595%25E8%25BD%2589%25E6%258F%259B%25E7%2582%25BAyolo-txt%25E6%25A0%25BC%25E5%25BC%258F-f1d193736e5c&psig=AOvVaw1TKqa81z2kTNeVUdl05oAE&ust=1690982200062000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKDgsN3Fu4ADFQAAAAAdAAAAABAO
