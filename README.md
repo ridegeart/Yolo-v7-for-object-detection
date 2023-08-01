@@ -55,7 +55,11 @@ dist.destroy_process_group()和torch.cuda.empty_cache()
 1. 增加epoch訓練次數  
 2. 使用小的網路模型yolov7-tiny.yaml，試試看增加batch_size，會不會超出內存。
 - confusion_matrix
+只有 car 類別有被預測出來。
 ![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/confusion_matrix.png)
+1. Background FP：為指的是不屬於任何一個類別但被檢測為其中一個類別的背景對象。所以有很多不屬於car類別的被檢測為該類。
+2. Background FN：指的是檢測器錯過的Trash或Non-trash對象，並被視為其他一些背景對象。所以檢測器無法檢測出hov和person和mortocycle。
+3. 訓練使用的影像大小太小(只有416X416)造成無法辨識出太小的物體，例如：人、摩托車。
 - 真實標記
 ![image](https://github.com/ridegeart/Yolo-v7-for-object-detection/blob/main/test_batch1_labels.jpg))
 - 網路預測的標記
